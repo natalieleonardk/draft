@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-State Enrollment Statistics Over The Past 10 Years</title>
+
+    <!-- import your final project's stylesheet and Google Fonts -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- link to DataTable -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map of COVID-19 Cases</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $('#dt-table').DataTable();
+            }
+        );
+    </script>
+
+    <!-- import your final project's javascript files -->
+    <script src="https://kit.fontawesome.com/b5839820b6.js" crossorigin="anonymous"></script>
+
+    <!-- import external scripts from other JS libraries -->
+    <!-- Highcharts-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/streamgraph.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+    <!-- DataTable-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <!-- Facebook JavaScript SDK-->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0"
+        nonce="6SZepde3"></script>
+
+    <!-- Hero image (the main image of the page; this can be a photoshop arrangement, a video, or a vector graphics; just pick one option) -->
+    <div id="heroimg">
+        <!-- upload an image/graphic to the img folder and set the link in src="", add a short name to alt="" -->
+        <img src="https://www.k-state.edu/media/images/sept18/Anderson2016.jpg" alt="placeholder" width="100%">
+
+        <!-- Upload a video to YouTube and embed the code below  
+
+        <iframe width="100%" height="650px" src="https://www.youtube.com/embed/AfoGkoqmvqY" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe> -->
+    </div> 
+
+    <!-- write the headings of your story -->
+    <div id="intro">
+        <h1>K-State Enrollment Statistics Over The Past 10 Years</h1>
+        <p class="byline">Natalie Leonard | For MC 316 </p>
+        <p class="date">November 21, 2020</p>
+    </div>
+
+    <!-- create a social media menu so that people can reach you (replace the placeholders with your real facebook, twitter, instagram links) -->
+    <div id="social">
+        <ul>
+            <li><a href="https://twitter.com/Natalie81620932/" target="_blank" id="twitter"><i
+                        class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/natalie.leo.7967/" target="_blank" id="facebook"><i
+                        class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/nat_leo/?hl=en/" target="_blank" id="instagram"><i
+                        class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- start writing your story below-->
+    <div class="main-text">
+        <p>
+            The fall of 2010 saw K-State instructing 23, 588 students. Today, nearly 11 years later, K-State is like
+            universities around the world, struggling to maintain enrollment high numbers during the COVID-19 pandemic.
+            The university is teaching nearly three thousand less students with enrollment sitting at 20, 854 this
+            semester. After analyzing the enrollment data from years past, interviewing K-State’s enrollment
+            professionals and speaking with students who returned to K-State this semester and others who chose to take
+            time off, it is clear there are many factors at play when students decide where they’d like to get their
+            college education.
+        </p>
+    </div>
+
+    <!-- your first section -->
+    <h3>Reasons For Decline</h3>
+
+    <!-- add your first graphics here -->
+    <!-- if you are using Highchart JS, add a pair of script tags below and write the code in between; make sure you replace "container" with "graphic-1"-->
+   
+    <div id="graphic-1">
+        <h4>Enrollment Statistics</h4>
+        <p>The figures below are provided by <a href="https://www.k-state.edu/registrar/statistics/enrbyyr.html">Kansas
+                State University</a></p>
+                <table id="dt-table">
+                    <thead>
+                        <tr>
+                            <th>Academic Year</th>
+                            <th>Fall</th>
+                            <th>Spring</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2010-2011</td>
+                            <td>23588</td>
+                            <td>22140</td>
+                        </tr>
+                        <tr>
+                            <td>2011-2012</td>
+                            <td>23863</td>
+                            <td>22518</td>
+                        </tr>
+                        <tr>
+                            <td>2012-2013</td>
+                            <td>24378</td>
+                            <td>23180</td>
+                        </tr>
+                        <tr>
+                            <td>2013-2014</td>
+                            <td>24581</td>
+                            <td>23229</td>
+                        </tr>
+                        <tr>
+                            <td>2014-2015</td>
+                            <td>24766</td>
+                            <td>23137</td>
+                        </tr>
+                        <tr>
+                            <td>2015-2016</td>
+                            <td>24146</td>
+                            <td>22635</td>
+                        </tr>
+                        <tr>
+                            <td>2016-2017</td>
+                            <td>23779</td>
+                            <td>22048</td>
+                        </tr>
+                        <tr>
+                            <td>2017-2018</td>
+                            <td>22795</td>
+                            <td>21400</td>
+                        </tr>
+                        <tr>
+                            <td>2018-2019</td>
+                            <td>22221</td>
+                            <td>20799</td>
+                        </tr>
+                        <tr>
+                            <td>2019-2020</td>
+                            <td>21719</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <figure class="highcharts-figure">
+                    <div id="line-1"></div>
+                    <p class="highcharts-description">
+                        Basic line chart showing trends in a dataset. This chart includes the
+                        <code>series-label</code> module, which adds a label to each line for
+                        enhanced readability.
+                    </p>
+                </figure>
+                <script>
+                    Highcharts.chart('line-1', {
+                
+                title: {
+                    text: 'K-State Enrollment Rates, 2010-2019'
+                },
+                
+                subtitle: {
+                    text: 'Source: k-state.edu'
+                },
+                
+                yAxis: {
+                    title: {
+                        text: 'Number of Students'
+                    }
+                },
+                
+                xAxis: {
+                    accessibility: {
+                        rangeDescription: 'Range: 2010 to 2019'
+                    }
+                },
+                
+                legend: {
+                    layout: 'vertical',
+                    align: 'right',
+                    verticalAlign: 'middle'
+                },
+                
+                plotOptions: {
+                    series: {
+                        label: {
+                            connectorAllowed: false
+                        },
+                        pointStart: 2010
+                    }
+                },
+                
+                series: [{
+                    name: 'Spring',
+                    data: [22140,22518,23180,23229,23137,22635,22048,21400,20799]
+                }, {
+                    name: 'Fall',
+                    data: [23588,23863,24378,24581,24766,24146,23779,22795,22221,21719]
+                }],
+                responsive: {
+                    rules: [{
+                        condition: {
+                            maxWidth: 500
+                        },
+                        chartOptions: {
+                            legend: {
+                                layout: 'horizontal',
+                                align: 'center',
+                                verticalAlign: 'bottom'
+                            }
+                        }
+                    }]
+                }
+                });
+                </script>
+    </div>
+    <script>
+        $(document).ready(
+            function () {
+                $('#dt-table').DataTable();
+            }
+        );
+    </script>
+     <p>For the entire table of K-State enrollment data from 1900 to 2020, see <a href="entiretable.html">here.</a> </p>
+    <div class="main-text">
+        <p>
+                Continue writing your paragraphs
+        </p>
+    </div>
+
+    <!--your second section-->
+    <h3>By College</h3>
+    <!--add your second graphics here-->
+    <div id="streamgraph"></div>
+<script>
+    Highcharts.chart('streamgraph', {
+
+chart: {
+  type: 'streamgraph',
+  marginBottom: 30,
+  zoomType: 'x'
+},
+title: {
+  floating: true,
+  align: 'center',
+  text: 'K-State Enrollment By College 2010-2019'
+},
+subtitle: {
+  floating: true,
+  align: 'center',
+  y: 30,
+  text: 'Source: <a href="https://www.k-state.edu/registrar/statistics/colleges.html">K-State Registrar</a>'
+},
+xAxis: {
+  maxPadding: 0,
+  type: 'category',
+  crosshair: true,
+  categories: [
+    '2010',
+    '2011',
+    '2012',
+    '2013',
+    '2014',
+    '2015',
+    '2016',
+    '2017',
+    '2018',
+    '2019'
+  ],
+  labels: {
+    align: 'left',
+    reserveSpace: false,
+    rotation: 270
+  },
+  lineWidth: 0,
+  margin: 20,
+  tickWidth: 0
+},
+
+yAxis: {
+  visible: false,
+  startOnTick: false,
+  endOnTick: false
+},
+
+legend: {
+  enabled: false
+},
+
+plotOptions: {
+  series: {
+    label: {
+      minFontSize: 5,
+      maxFontSize: 15,
+      style: {
+        color: 'rgba(255,255,255,0.75)'
+      }
+    }
+  }
+},
+
+// Data parsed with olympic-medals.node.js
+series: [{
+  name: "Agriculture",
+  data: [
+    2255, 2375, 2525, 2680, 2780, 2699, 2707, 2594, 2512, 2326
+  ]
+}, {
+  name: "Architecture, Planning and Design",
+  data: [
+    663, 535, 429, 415, 460, 464, 452, 425, 455, 471
+  ]
+}, {
+  name: "Arts and Sciences",
+  data: [6687, 6828, 7063, 6804, 6166, 5800, 5474, 5174, 4868, 4568]
+}, {
+  name: "Business Administration",
+  data: [2493, 2566, 2603, 2675, 2774, 2664, 2684, 2645, 2631, 2521]
+}, {
+  name: "Education",
+  data: [1422, 1289, 1251, 1203, 1249, 1240, 1163, 1080, 1002, 996]
+}, {
+  name: "Engineering",
+  data: [2998, 3056, 3172, 3327, 3503, 3666, 3876, 3732, 3596, 3419]
+}, {
+  name: "Health and Human Sciences",
+  data: [2026, 2062, 2123, 2458, 2678, 2708, 2544, 2298, 2248, 2318]
+}, {
+  name: "Technology and Aviation",
+  data: [661, 674, 687, 607, 717, 618, 572, 540, 557, 591]
+}, {
+  name: "Veterinary Medicine",
+  data: [462, 457, 464, 465, 476, 468, 461, 452, 463, 467]
+}, {
+  name: "Graduate School",
+  data: [3921, 4021, 4061, 3947, 3963, 3819, 3846, 3855, 3889, 4042]
+}],
+exporting: {
+  sourceWidth: 800,
+  sourceHeight: 600
+}
+
+});
+
+</script>
+
+    <!-- if you are using Highchart JS, write the code in between a pair of script tags below; make sure you replace "container" with "graphic-2"-->
+
+
+    <div class="main-text">
+        <p>
+                Continue writing your paragraphs
+        </p>
+    </div>
+
+
+    <!--your third section-->
+
+    <h3>Effects of Enrollment Decrease</h3>
+
+    <!--add your third graphics here-->
+    <div id="graphic-3">
+        <table id="dt-table" class="display" width="100%" style="text-align: center;">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Positive</th>
+                    <th>Death</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <!-- if you are using Highchart JS, write the code in between a pair of script tags below; make sure you replace "container" with "graphic-2"-->
+        <script src="table.js"></script>
+
+
+
+    <div class="main-text">
+        <p>
+                Continue writing your paragraphs
+        </p>
+    </div>
+
+    <!--write your data methodology section-->
+
+    <div id="data-method">
+        <h4>Data collection and data analysis</h4>
+        <p>This data was collected from <a href="https://www.k-state.edu/registrar/statistics/colleges.html"> K-State's website</a>. The data was then analyzed in a google spreadsheet, where
+                    it was cleaned. I also spoke with Dr. Bin Ning, the Associate Provost of Institutional Research at K-State
+                    who provided the enrollment numbers for 2020. I cross checked these numbers with K-State’s Office of the
+                    Registrar to ensure they were correct.</p>
+    </div>
+
+    <!--Share button | Go here to generate the real url: https://developers.facebook.com/docs/plugins/share-button/-->
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count"
+        data-size="small"><a target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+            class="fb-xfbml-parse-ignore">Share</a></div>
+
+    <!--add things to your footer-->
+            <footer>
+                <p>© Copyright 2020, Manhattan, KS</p>
+            </footer>
+
+</body >
+
+</html >
